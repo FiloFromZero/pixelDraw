@@ -1,6 +1,7 @@
 """This module represents the behavior of a lexical analyzer for PixelDraw.
 
-Author: Adapted by ChatGPT from Carlos Andres Sierra <casierrav@udistrital.edu.co>
+Authors: Nicolás Alberto Rodríguez Delgado <20202020019>
+         Daniel Mateo Montoya González <20202020098>
 """
 
 import re

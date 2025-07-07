@@ -1,8 +1,8 @@
 """
 This module represents the behavior of a syntactic analyzer for PixelDraw.
 
-Authors: Nicolás Alberto Rodríguez Delgado <niarodriguezd@udistrital.edu.co> <20202020019>
-         Cristian----
+Authors: Nicolás Alberto Rodríguez Delgado <20202020019>
+         Daniel Mateo Montoya González <20202020098>
 """
 
 # Updated Grammar:
