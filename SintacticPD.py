@@ -47,7 +47,9 @@ class SintacticAnalyzerPixelDraw:
 
     def instruccion(self):
         # Determine the type of instruction based on the current token
-        if self.current_token.type_ == "TAMANIO":
+        if self.current_token is None:
+            self.error("instrucción válida")
+        elif self.current_token.type_ == "TAMANIO":
             self.tamano()
         elif self.current_token.type_ == "COLOR":
             self.color()
@@ -63,7 +65,9 @@ class SintacticAnalyzerPixelDraw:
 
     def tamano(self):
         # Handle the TAMANIO (size) instruction
-        if self.current_token.type_ == "TAMANIO":
+        if self.current_token is None:
+            self.error("TAMANIO")
+        elif self.current_token.type_ == "TAMANIO":
             print(f"Detectado tamaño: {self.current_token.value}")
             self.advance()
         else:
@@ -71,7 +75,9 @@ class SintacticAnalyzerPixelDraw:
 
     def color(self):
         # Handle the COLOR instruction
-        if self.current_token.type_ == "COLOR":
+        if self.current_token is None:
+            self.error("COLOR")
+        elif self.current_token.type_ == "COLOR":
             print(f"Detectado color: {self.current_token.value}")
             self.advance()
         else:
@@ -79,7 +85,9 @@ class SintacticAnalyzerPixelDraw:
 
     def punto(self):
         # Handle the PUNTO (point) instruction
-        if self.current_token.type_ == "PUNTO":
+        if self.current_token is None:
+            self.error("PUNTO")
+        elif self.current_token.type_ == "PUNTO":
             print(f"Detectado punto: {self.current_token.value}")
             self.advance()
         else:
@@ -87,7 +95,9 @@ class SintacticAnalyzerPixelDraw:
 
     def rectangulo(self):
         # Handle the RECTANGULO (rectangle) instruction
-        if self.current_token.type_ == "RECTANGULO":
+        if self.current_token is None:
+            self.error("RECTANGULO")
+        elif self.current_token.type_ == "RECTANGULO":
             print(f"Detectado rectángulo: {self.current_token.value}")
             self.advance()
         else:
@@ -95,7 +105,9 @@ class SintacticAnalyzerPixelDraw:
 
     def repetir(self):
         # Handle the REPETIR (repeat) block
-        if self.current_token.type_ == "REPETIR_INI":
+        if self.current_token is None:
+            self.error("REPETIR_INI")
+        elif self.current_token.type_ == "REPETIR_INI":
             print(f"Inicio de repetición: {self.current_token.value}")
             self.advance()
             # Process instructions inside the repeat block
